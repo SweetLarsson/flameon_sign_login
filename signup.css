@@ -1,0 +1,93 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.video-container {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+video {
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  filter: blur(20px);
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.overlay {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  padding: 20px;
+  position: absolute;
+  align-items: center;
+  box-sizing: border-box;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.form-container {
+  background: rgba(255, 255, 255, 0.55);
+  border-radius: 15px;
+  max-width: 400px;
+  padding: 30px;
+  width: 100%;
+}
+
+img{
+    width: 45px;
+}
+
+button[type="submit"] {
+  background-color: #ff5e00;
+  padding: 15px;
+  border: none;
+}
+
+button[type="submit"]:hover {
+  background-color: #db4437;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"] {
+  padding: 10px;
+}
+
+.text-orange {
+  color: #ff5e00;
+}
+
+.google-login {
+  background-color: #db4437;
+  color: white;
+}
+
+.facebook-login {
+  background-color: #4267b2;
+  color: white;
+}
+
+.google-login:hover,
+.facebook-login:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 600px) {
+  .form-container {
+    padding: 20px;
+  }
+}
