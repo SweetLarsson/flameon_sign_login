@@ -9,14 +9,16 @@
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FlameOn</title>
-    <link rel="stylesheet" href="signup.css" />
+    <link rel="stylesheet" href="styles.css" />
 
     <!-- Tab Icon -->
     <link rel="icon" href="assets/images/logo/flameon.png" />
+    <!-- CSS styling bootstrap -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+    <!--  -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
       rel="stylesheet"
@@ -80,18 +82,22 @@
               ></span>
             </div>
 
-            <small id="password-hint" class="text-danger d-none">
-              <strong style="color: black;">Password must be atleast:</strong> <br>
-              8 characters, <br>
-              One uppercase, <br>
-              One lowercase, <br>
-              One digit, <br> 
-              One special character.
+            <!-- Password Criteria -->
+            <small id="password-hint" class="text-danger">
+              <strong style="color: black">Password must be atleast:</strong>
+              <ul style="list-style-type: none; padding: 0">
+                <li id="length" class="text-danger">8 characters</li>
+                <li id="uppercase" class="text-danger">One uppercase letter</li>
+                <li id="lowercase" class="text-danger">One lowercase letter</li>
+                <li id="digit" class="text-danger">One digit</li>
+                <li id="special" class="text-danger">One special character</li>
+              </ul>
             </small>
 
             <!-- Login -->
             <button type="submit" class="btn btn-primary w-100">Login</button>
 
+            <!-- Alternative login (Google and Facebook) -->
             <div class="d-flex justify-content-between mt-3">
               <button type="button" class="btn google-login">
                 <i class="bi bi-google"></i> Login with Google
